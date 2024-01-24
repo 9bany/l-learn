@@ -21,9 +21,12 @@ fn match_struct() {
         y: u32,
     }
 
-    let food = Food{x: (2,3), y: 3};
+    let food = Food{x: (2,2), y: 2};
     match food {
-        Food {x: (2, b),..} => {
+        // Food {x: (2, b),..} if b == 3 => {
+        //     println!("b: {}", b)
+        // },
+        Food {x: (a, b @ 3),..} => {
             println!("b: {}", b)
         },
         _ => println!("default")
@@ -33,8 +36,10 @@ fn match_struct() {
     println!("{:?} {}", x0, y0);
 }
 
+
+
 fn main() {
-    match_tuple();
-    match_arr();
+    // match_tuple();
+    // match_arr();
     match_struct();
 }
