@@ -1,0 +1,14 @@
+[package]
+name = "server"
+version = "0.1.0"
+edition = "2024"
+
+[[bin]]
+name = "server"
+path = "server.rs"
+doc = false
+
+[dependencies]
+api = { path = "../../crates/api" }
+config = { path = "../../crates/config" }
+actix-web = "4"
