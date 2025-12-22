@@ -12,3 +12,5 @@ doc = false
 api = { path = "../../crates/api" }
 config = { path = "../../crates/config" }
 actix-web = "4"
+env_logger = "0.11.8"
+log = "0.4"
