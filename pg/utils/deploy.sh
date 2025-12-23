@@ -49,7 +49,7 @@ docker cp $EXT_NAME--0.0.1.sql $CONTAINER_NAME:/tmp/
 docker cp Makefile $CONTAINER_NAME:/tmp/
 
 # 2. Compile and install in container
-echo "🔨 Compiling and installing extension..."
+echo "Compiling and installing extension..."
 docker exec $CONTAINER_NAME bash -c "cd /tmp && make clean && make && make install"
 
 # 3. Check if extension exists and drop it
