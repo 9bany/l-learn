@@ -21,9 +21,10 @@ async fn main() -> io::Result<()> {
 
     println!("Environment: {}", config.env);
     log::info!("starting HTTP server at http://localhost:8080");
-    HttpServer::new(move || App::new().service(index).service(hello))
+
+    let server = HttpServer::new(move || App::new().service(index).service(hello))
         .bind(("127.0.0.1", 8080))?
-        .workers(2)
-        .run()
-        .await
+        .workers(2);
+
+    server.run().await
 }
