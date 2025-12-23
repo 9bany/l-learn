@@ -24,7 +24,7 @@ fi
 
 # Uninstall mode
 if [[ "$UNINSTALL" == "true" ]]; then
-    echo "🗑️ Dropping extension from database..."
+    echo "Dropping extension from database..."
     PGPASSWORD=postgres psql -h localhost -p 5430 -U postgres -d postgres -c "DROP EXTENSION IF EXISTS $EXT_NAME CASCADE;"
     
     echo "Removing extension files from container..."
