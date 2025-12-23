@@ -14,7 +14,7 @@ else
     CONTAINER_NAME=${1:-etl-test}
 fi
 
-EXT_NAME="addme"
+EXT_NAME="utils"
 
 if [[ "$UNINSTALL" == "true" ]]; then
     echo "Uninstalling $EXT_NAME extension from Docker container: $CONTAINER_NAME"

@@ -1,6 +1,6 @@
-MODULES = addme
-EXTENSION = addme
-DATA = addme--0.0.1.sql
+MODULES = utils
+EXTENSION = utils
+DATA = utils--0.0.1.sql
 
 # Database connection parameters
 DB_HOST = localhost
