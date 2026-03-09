@@ -1,0 +1,17 @@
+[package]
+name = "services"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+path = "lib.rs"
+
+[dependencies]
+models = { path = "../models" }
+uuid = { version = "1", features = ["v4", "serde"] }
+sqlx = { version = "0.8", features = [
+    "runtime-tokio-rustls", 
+    "postgres", 
+    "uuid", 
+    "chrono"
+]}
